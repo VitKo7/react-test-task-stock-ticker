@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    padding: 10px 20px;
+}
+
+// ! ----- Header -----
+.headerPart {
+    display: flex;
+    justify-content: space-around;
+}
+
+.choose-interval {
+    padding: 15px 0;
+}
+.choose-interval label,
+.choose-interval select {
+    margin-right: 25px;
+}
+
+// ! ----- TickersContainer -----
+
+.sidebarLeft {
+    width: 30%;
+    // border: 1px solid red;
+}
+
+.stock-ticker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 90vw;
+    .ticker-info__line {
+        padding-bottom: 10px;
+        .name {
+            padding-right: 20px;
+            text-transform: capitalize;
+        }
+        .value {
+            padding-right: 10px;
+            font-weight: 700;
+        }
+        .arrow {
+            font-weight: 700;
+            &.arrow-up {
+                color: green;
+            }
+            &.arrow-same {
+                color: blue;
+            }
+            &.arrow-down {
+                color: red;
+            }
+        }
+    }
+}
+
+// ! ----- Stock Chart -----
+tr,
+th {
+    text-align: center;
+}
+
+td.price.arrow-down {
+    color: orangered;
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 19px;
+        right: -4px;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-top-color: orangered;
+        border-bottom: 0;
+    }
+}
+td.price.arrow-up {
+    color: green;
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 19px;
+        right: -4px;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-bottom-color: green;
+        border-top: 0;
+    }
+}
+
+// ! ----- Footer -----
+
+.footerPart {
+    height: 50px;
+    border-top: 1px solid rgb(160, 160, 160);
+    padding: 15px;
+}
+
+.stock-disclaimer {
+    text-align: center;
+}
