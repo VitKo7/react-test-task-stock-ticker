@@ -18,15 +18,22 @@ export class TickersChart extends Component {
         return (
             <div>
                 {error && <p className="row">Sorry, check data. Error.</p>}
-                {loading ? <p className="row">Loading...</p> : null}
+                {loading ? (
+                    <p className="row">Please, wait... Loading...</p>
+                ) : null}
+
+                {!loading && !tickers.length ? (
+                    <p className="row">No tickers yet...</p>
+                ) : null}
+
                 {tickers && tickers.length && <TickersList tickers={tickers} />}
             </div>
         );
     }
 }
 
-const mapStateToProps = ({ tickers, loading, error }) => {
-    console.log(tickers, loading, error);
+const mapStateToProps = (props) => {
+    const { tickers, loading, error } = props.stockTicker;
     return {
         tickers,
         loading,

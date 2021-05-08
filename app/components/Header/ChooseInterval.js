@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { setFetchInterval } from '../../actions/tickerActions';
 
-export class ChooseInterval extends Component {
+class ChooseInterval extends Component {
     constructor(props) {
         super(props);
         this.handleChange = this.handleChange.bind(this);
@@ -16,7 +16,7 @@ export class ChooseInterval extends Component {
     }
 
     setUpdateTime(result) {
-        // localStorage.setItem('interval', JSON.stringify(result));
+        localStorage.setItem('interval', JSON.stringify(result));
         try {
             axios.post(`http://localhost:4000/${result}`);
         } catch (error) {
@@ -36,14 +36,15 @@ export class ChooseInterval extends Component {
                             value={interval}
                             onChange={this.handleChange}
                         >
-                            <option value="500">0.5 seconds</option>
+                            <option value="500">500</option>
                             <option value="1000">1000</option>
-                            <option value="3000">3 seconds</option>
-                            <option value="5000">5 seconds</option>
+                            <option value="3000">3000</option>
+                            <option value="5000">5000</option>
                             <option value="7000">7000</option>
-                            <option value="10000">10 seconds</option>
+                            <option value="10000">10000</option>
                         </select>
                         <button
+                            // type="button"
                             className="btn btn-info"
                             onClick={() => this.setUpdateTime(interval)}
                         >
@@ -56,9 +57,9 @@ export class ChooseInterval extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ({ stockTicker }) => {
     return {
-        interval: state.interval,
+        interval: stockTicker.interval,
     };
 };
 

@@ -6,7 +6,7 @@ const TickersContainer = () => {
     return (
         <div className="mainPart">
             <div className="sidebarLeft">
-                <h4>Single Ticker:</h4>
+                <h4 className="sidebarLeft-title">Single Ticker:</h4>
                 <div className="stock-ticker">
                     <SingleTicker />
                 </div>

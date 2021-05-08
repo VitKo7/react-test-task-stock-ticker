@@ -12,7 +12,6 @@ export const connection = (stockSymbol, ticker) => {
             console.log(data);
             ticker(JSON.parse(data));
         });
-
         socket.emit('ticker', stockSymbol);
     });
 

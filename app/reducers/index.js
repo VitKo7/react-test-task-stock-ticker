@@ -5,7 +5,7 @@ export const INITIAL_STATE = {
     tickers: [],
     loading: false,
     error: null,
-    interval: JSON.parse(localStorage.getItem('interval')) || 500,
+    interval: JSON.parse(localStorage.getItem('interval')) || 5000,
 };
 
 const createRootReducer = (history) =>
