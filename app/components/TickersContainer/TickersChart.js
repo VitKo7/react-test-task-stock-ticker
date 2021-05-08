@@ -26,7 +26,7 @@ export class TickersChart extends Component {
                     <p className="row">No tickers yet...</p>
                 ) : null}
 
-                {tickers && tickers.length && <TickersList tickers={tickers} />}
+                {tickers?.length && <TickersList tickers={tickers} />}
             </div>
         );
     }
