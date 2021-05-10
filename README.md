@@ -78,12 +78,4 @@ Simply replace **AAPL** in the URL with a **valid ticker symbol**. Price tickers
 
 ## Issues:
 
-1. components > SingleTicker - can't receive 'ticker' from server, don't know why...
-
-2. components > ChooseInterval - interval - undefined, setFetchInterval: undefined + not a function!???
-   Failed prop type: The prop `interval` is marked as required in `ChooseInterval`, but its value is `undefined`.
-   Failed prop type: The prop `interval` is marked as required in `ChooseInterval`, but its value is `undefined`.
-
-3. components > TickersChart - tickers - undefined, loading: undefined !???
-   Failed prop type: The prop `tickers` is marked as required in `TickersChart`, but its value is `undefined`.
-   Failed prop type: The prop `loading` is marked as required in `TickersChart`, but its value is `undefined`.
+1. components > SingleTicker - can't receive 'ticker' from server, need to check it again!

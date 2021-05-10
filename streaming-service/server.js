@@ -80,6 +80,16 @@ var server = http.createServer(app);
 var io = io.listen(server);
 io.set('origins', '*:*');
 
+//not GET but POST request changes interval
+app.post('/:ms', function (req, res) {
+    try {
+        FETCH_INTERVAL = req.params.ms;
+        res.status(200).send();
+    } catch (error) {
+        res.status(400).send();
+    }
+});
+
 app.get('/', function (req, res) {
     res.sendfile(__dirname + '/index.html');
 });

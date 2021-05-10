@@ -42,55 +42,7 @@
     background-color: #fff;
     padding: 0 10px;
 
-    display: flex;
     overflow-y: auto;
-    // border: 1px solid green;
-}
-
-.sidebarLeft {
-    width: 23%;
-    // border: 1px solid blue;
-    height: 99%;
-}
-.sidebarRight {
-    width: 76%;
-    // border: 1px solid red;
-    height: 99%;
-}
-
-.sidebarLeft-title {
-    padding-top: 10px;
-}
-.stock-ticker {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 77vh;
-    padding-top: 30px;
-
-    .ticker-info__line {
-        padding-bottom: 10px;
-        .name {
-            padding-right: 20px;
-            text-transform: capitalize;
-        }
-        .value {
-            padding-right: 10px;
-            font-weight: 700;
-        }
-        .arrow {
-            font-weight: 700;
-            &.arrow-up {
-                color: green;
-            }
-            &.arrow-same {
-                color: blue;
-            }
-            &.arrow-down {
-                color: red;
-            }
-        }
-    }
 }
 
 // ! ----- Stock Chart -----

@@ -14,7 +14,7 @@ export const TickerItem = ({ id, item, className }) => {
             <td className={`price ${className}`}>{item.price}</td>
             <td>{item.change}</td>
             <td>{item.change_percent}</td>
-            <td>{tradeTime} </td>
+            <td>{tradeTime}</td>
             <td>{item.dividend}</td>
             <td>{item.yield}</td>
         </tr>
