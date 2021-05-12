@@ -1,8 +1,3 @@
-const tickerAction = (tickerObject) => ({
-    type: 'UPDATE_DATA',
-    payload: tickerObject,
-});
-
 const connectSocket = () => ({
     type: 'CONNECT_SOCKET',
 });
@@ -34,7 +29,6 @@ const startFetching = (dispatch, connectFunction) => () => {
 };
 
 export {
-    tickerAction,
     connectSocket,
     connectSocketSuccess,
     connectSocketError,

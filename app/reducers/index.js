@@ -40,14 +40,6 @@ const createRootReducer = (history) =>
                         ...state,
                         interval: action.payload,
                     };
-                case 'UPDATE_DATA':
-                    return {
-                        ...state,
-                        tickers: [...action.payload],
-                        previuosTicker: { ...state },
-                        loading: false,
-                        error: null,
-                    };
 
                 default:
                     return state;
